@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && scp -Сr ./build/* crimson-alloya@84.252.139.245:/home/crimson-alloya/mesto-frontend"
+    "deploy": "npm run build && scp -Cr ./build/* alloya@51.250.99.234:/home/alloya/frontend"
   },
   "eslintConfig": {
     "extends": [
