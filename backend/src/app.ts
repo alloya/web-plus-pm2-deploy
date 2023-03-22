@@ -14,7 +14,13 @@ const app = express();
 mongoose.connect(DB_ADDRESS);
 
 app.use(cors({
-  origin: 'http://alloya.nomoredomains.work',
+  origin: [
+    'http://alloya.nomoredomains.work',
+    'https://alloya.nomoredomains.work',
+    'http://localhost:3000',
+  ],
+  methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
